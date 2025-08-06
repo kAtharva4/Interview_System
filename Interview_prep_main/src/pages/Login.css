@@ -1,0 +1,115 @@
+/* LOGIN PAGE STYLES */
+#login-page {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--card-light);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.dark #login-page {
+  background-color: var(--card-dark);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#login-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.dark #login-page h2 {
+  color: var(--text-dark);
+}
+
+/* Form Elements */
+#login-page .form-control {
+  width: 90%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-light);
+  background-color: var(--card-light);
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.dark #login-page .form-control {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+  border: 1px solid var(--border-dark);
+}
+
+#login-page .form-control:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+.dark #login-page .form-control:focus {
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+/* Login Button */
+#login-page .btn-primary {
+  width: 98%;
+  height: 44px;
+  background-color: var(--primary-light);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dark #login-page .btn-primary {
+  background-color: var(--primary-dark);
+}
+
+#login-page .btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Additional Text */
+#login-page .text-link {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--primary-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.dark #login-page .text-link {
+  color: var(--primary-dark);
+}
+
+#login-page .text-link:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #login-page {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+}

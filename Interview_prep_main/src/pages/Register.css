@@ -1,0 +1,127 @@
+/* Registration Page Styles */
+#registration-page {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  animation: fadeInUp 0.8s ease forwards 0.2s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#registration-page .card {
+  background-color: var(--card-light);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.dark #registration-page .card {
+  background-color: var(--card-dark);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#registration-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.dark #registration-page h2 {
+  color: var(--text-dark);
+}
+
+#registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#registration-form input {
+  height: 44px;
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-light);
+  background-color: var(--card-light);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.dark #registration-form input {
+  border-color: var(--border-dark);
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+}
+
+#registration-form input:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+.dark #registration-form input:focus {
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+  outline: none;
+}
+
+#registration-form .btn {
+  background-color: var(--primary-light);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  height: 44px;
+  border: none;
+}
+
+.dark #registration-form .btn {
+  background-color: var(--primary-dark);
+}
+
+#registration-form .btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+#registration-form .btn:active {
+  transform: translateY(0);
+}
+
+#registration-form .link {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.dark #registration-form .link {
+  color: var(--primary-dark);
+}
+
+#registration-form .link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #registration-page {
+    padding: 1rem;
+  }
+
+  #registration-page .card {
+    padding: 1.5rem 1rem;
+  }
+}
